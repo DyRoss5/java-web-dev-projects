@@ -19,6 +19,7 @@ public class MenuItem {
         this.dateAdded = dateAdded;
     }
     public void setName(String name) {
+
         this.name = name;
     }
     public void setPrice(double price) {
