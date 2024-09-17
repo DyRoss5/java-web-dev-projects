@@ -8,9 +8,9 @@ public class MenuItem {
     private String description;
     private String category;
     private boolean isNew;
-    private LocalDate dateAdded;
+    private String dateAdded;
 
-    public MenuItem(String name, double price, String description, String category, boolean isNew, LocalDate dateAdded) {
+    public MenuItem(String name, double price, String description, String category, boolean isNew, String dateAdded) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -34,7 +34,7 @@ public class MenuItem {
     public void setNew(boolean isNew) {
         this.isNew = isNew;
     }
-    public void setDateAdded(LocalDate dateAdded) {
+    public void setDateAdded(String dateAdded) {
         this.dateAdded = dateAdded;
     }
     public String getName() {
@@ -52,9 +52,26 @@ public class MenuItem {
     public boolean isNew() {
         return isNew;
     }
-    public LocalDate getDateAdded() {
+    public String getDateAdded() {
         return dateAdded;
     }
+
+    public boolean equals(Object toBeCompared) {
+        if (toBeCompared == this) {
+            return true;
+        }
+
+        if (toBeCompared == null) {
+            return false;
+        }
+
+        if (toBeCompared.getClass() != getClass()) {
+            return false;
+        }
+
+        MenuItem comparedItem = (MenuItem) toBeCompared;
+            return comparedItem.getName() == getName();
+        }
 
 }
 

@@ -32,6 +32,17 @@ public class Menu {
             return lastUpdated;
         }
 
+        public MenuItem getItem(String itemName) {
+        int itemIndex = menuItems.indexOf(itemName);
+        return menuItems.get(itemIndex);
+        }
+
+        public void printMenu() {
+        for (MenuItem item : menuItems) {
+            System.out.println(item.getName());
+        }
+        }
+
     }
 
 
