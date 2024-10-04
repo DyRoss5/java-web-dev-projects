@@ -42,6 +42,11 @@ public abstract class BaseDisc {
     public double dataTransferRate() {
         return this.getSeqSpeed() * this.getxSpeed();
     }
+
+    private double getSeqSpeed() {
+        return 0;
+    }
+
     // override to String
     @Override
     public String toString() {
